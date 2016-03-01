@@ -7,10 +7,10 @@
       </nav>
     </div>
     <div class="col-md-8">
-      <% @blogs.each do |blog|%>
-        <h3><%= blog.title %></h3>
+      <% @posts.each do |post|%>
+        <h3><%= post.title %></h3>
         <p class="lead">
-          by <%= blog.author %>
+          by <%= post.author.full_name %>
         </p>
         <hr>
         <p>
@@ -21,8 +21,8 @@
         <img class="img-responsive" src="http://placehold.it/900x300" alt="">
         <hr>
         <div class="post">
-          <p class="lead"><%= blog.summary %></p>
-          <p><%= blog.post %></p>
+          <p class="lead"><%= post.summary %></p>
+          <p><%= post.post %></p>
         </div>
         <hr>
       <% end %>

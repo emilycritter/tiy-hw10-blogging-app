@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @blogs = Blog.all
+    @posts = post.all
   end
 
   def show
-    @blog = Blog.find_by id: params[:id]
+    @post = Post.find_by id: params[:id]
   end
 
   def new
