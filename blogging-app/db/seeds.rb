@@ -8,6 +8,7 @@ if Author.all.blank?
   Author.create first_name: "Sebastian", last_name: "Villareal"
   Author.create first_name: "Nash", last_name: "Fowsar"
   Author.create first_name: "Cris", last_name: "Joya"
-  Author.create first_name: "Zaki", last_name: "Ritter"
-  Author.create first_name: "Rooshy", last_name: "Ritter"
+  Author.create first_name: "Zaki", last_name: "Ahmed"
+  Author.create first_name: "Rooshy", last_name: "Roy"
+  Author.create first_name: "Jesse", last_name: "Wolgamott"
 end

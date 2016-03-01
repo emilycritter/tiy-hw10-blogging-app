@@ -19,7 +19,11 @@
           Posted on <%= post.created_at %>
         </p>
         <hr>
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <% if post.img_file.nil? %>
+          <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <% else %>
+          <%= img_tag post.img_file%>
+        <% end %>
         <hr>
         <div class="post">
           <p class="lead"><%= post.summary %></p>
