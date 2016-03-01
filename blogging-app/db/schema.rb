@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160301210325) do
     t.string "last_name"
   end
 
-  create_table "blogs", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "summary"
     t.text     "post"

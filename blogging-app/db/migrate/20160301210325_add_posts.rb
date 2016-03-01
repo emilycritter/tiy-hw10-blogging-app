@@ -1,6 +1,6 @@
 class AddPosts < ActiveRecord::Migration
   def change
-    create_table :blogs do |t|
+    create_table :posts do |t|
       t.string :title
       t.text :summary
       t.text :post
