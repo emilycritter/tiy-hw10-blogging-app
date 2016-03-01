@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Emily C. Ritter</h1>
+      <nav>
+        <button type="button" class="btn btn-default"><%= link_to "Home", root_path %></button>
+      </nav>
+    </div>
+    <div class="col-md-8">
+      <% @blogs.each do |blog|%>
+        <h3><%= blog.title %></h3>
+        <p class="lead">
+          by <%= blog.author %>
+        </p>
+        <hr>
+        <p>
+          <span class="glyphicon glyphicon-time"></span>
+          Posted on August 24, 2013 at 9:00 PM
+        </p>
+        <hr>
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <hr>
+        <div class="post">
+          <p class="lead"><%= blog.summary %></p>
+          <p><%= blog.post %></p>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
