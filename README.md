@@ -1,7 +1,7 @@
-# Blogging Application
-## Creating a blogging application is a bit of a right of passage.
+# Rails CRUD
+## Blogging Application
 ###### Assignment  Due Wednesday, March 02, 2016  
-###### Rails CRUD
+Creating a blogging application is a bit of a right of passage.
 
 Create a Blogging Rails Application.
 
