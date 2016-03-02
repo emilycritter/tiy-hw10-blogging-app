@@ -1,2 +1,11 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <%= render 'nav' %>
+    </div>
+    <div class="col-md-8">
+      <h1><%= @post.title %> <small> originally posted on <%= @post.created_at.strftime("%b %d, %Y") %></small></h1>
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>

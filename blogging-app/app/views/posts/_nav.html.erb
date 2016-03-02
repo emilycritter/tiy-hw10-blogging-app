@@ -1,0 +1,10 @@
+<div class="fixed">
+  <h1>Ipsum Bipsum Bop Blog<br><small>nothing rhymes with ipsum</small></h1>
+  <hr>
+  <nav>
+    <button type="button" class="btn btn-default"><%= link_to "Home", root_path %></button>
+    <button type="button" class="btn btn-default"><%= link_to "Add Post", new_post_path %></button>
+    <button type="button" class="btn btn-default"><%= link_to "Edit", edit_post_path(id: @post.id) %></button>
+    <button type="button" class="btn btn-default" style="border:1px solid red;"><%= link_to "Delete", post_path(id: @post.id), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></button>
+  </nav>
+</div>
