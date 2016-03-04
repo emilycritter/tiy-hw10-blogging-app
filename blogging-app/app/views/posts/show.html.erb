@@ -28,8 +28,10 @@
       </div>
       <hr>
       <nav>
-        <button type="button" class="btn btn-default"><%= link_to "Edit", edit_post_path(id: @post.id) %></button>
-        <button type="button" class="btn btn-default" style="border:1px solid red;"><%= link_to "<i class='fa fa-trash'></i>".html_safe, post_path(id: @post.id), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></button>
+        <%= link_to "Edit", edit_post_path(id: @post.id), class: "btn btn-default" %>
+        <%= link_to post_path(id: @post.id), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-default" do %>
+          <i class='fa fa-trash', style="color: red;"></i>
+        <% end %>
       </nav>
       <hr>
       <br>
