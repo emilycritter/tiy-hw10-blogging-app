@@ -25,11 +25,7 @@
             <small>Edited at <%= post.updated_at.strftime("%b %d, %Y") %></small>
           <% end %>
         </p>
-        <% if post.img_file.nil? %>
-          <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-        <% else %>
-          <%= image_tag post.img_file, style:"max-width: 100%; min-width: 100%; border: 1px solid #777777;"%>
-        <% end %>
+        <%= image_tag attachment_url(post, :photo, :fill, 400, 150, format: "jpg"), style:"max-width: 100%; min-width: 100%; border: 1px solid #777777;"%>
         <hr>
         <div class="post">
           <p class="lead"><%= post.summary %></p>
