@@ -26,9 +26,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.label "Photo" %>
-    <br>
-    <em>**<%= "Check back later for upgrades and the ability to add/update photos" %></em>
+    <%= f.attachment_field :photo %>
+    <% if @post.errors[:photo].any? %>
+      <span class="mdl-textfield__error">* <%= @post.errors[:photo].join(", ") %> </span>
+    <% end %>
+    <%= f.label :photo, class: "" %>
   </div>
 
   <div class="">

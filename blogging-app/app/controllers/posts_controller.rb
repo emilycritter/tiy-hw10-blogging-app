@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order("updated_at desc")
   end
 
   def show
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post.title = params[:post][:title]
     @post.summary = params[:post][:summary]
     @post.post = params[:post][:post]
-    @post.img_file = params[:post][:img_file]
+    @post.photo = params[:post][:photo]
     @post.author_id = params[:post][:author_id]
     if @post.save
       redirect_to root_path
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     @post.title = params[:post][:title]
     @post.summary = params[:post][:summary]
     @post.post = params[:post][:post]
-    @post.img_file = params[:post][:img_file]
+    @post.photo = params[:post][:photo]
     @post.author_id = params[:post][:author_id]
     if @post.save
       redirect_to post_path(id: @post.id)
